@@ -1,3 +1,4 @@
+#importing stuff to make it look cool 
 import os
 from termcolor import colored
 import time
@@ -8,7 +9,7 @@ print(colored("Welcome to the Calculator", "green"))
 clear(1) 
 
 calculator_running1 = True 
-
+#this is where/how your inputs are stored
 while calculator_running1 == True:
   x = float(input (colored("Please input", "green") + colored(" FIRST ", "red") + colored("number", "green") + "\ninput here: "))      
   clear(.5)
@@ -19,7 +20,8 @@ while calculator_running1 == True:
 
   y = float(input (colored("Please input", "green") + colored(" SECOND ", "red") + colored("number", "green") + ("\ninput here: ")))
 
-
+#The loop to let you keep puttting in problems and getting an answer 
+#It makes you select either 1,2,3, or 4. 
   operation = True
   while operation == True:
     clear(.5)
