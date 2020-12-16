@@ -1,64 +1,32 @@
-#importing stuff to make it look cool 
+#Importing stuff to make it look cool 
 import os
 from termcolor import colored
 import time
+from time import sleep
+import pyfiglet
 def clear(seconds=0):
   time.sleep(seconds)
   os.system('clear')
-print(colored("Welcome to the Calculator", "green")) 
-clear(1) 
+#How I make "Welcome to the Calculator" appear on the screen 
+def type(words):
+  for char in words:
+    sleep(.009)
+    print(char, end='', flush=True)
 
-calculator_running1 = True 
-#this is where/how your inputs are stored
-while calculator_running1 == True:
-  x = float(input (colored("Please input", "green") + colored(" FIRST ", "red") + colored("number", "green") + "\ninput here: "))      
-  clear(.5)
+type(pyfiglet.figlet_format(("Welcome to the Calculator")))
+clear(1)
 
+calculator = True
+#Inputing your problem 
+while calculator == True:
+  def type(words):
+    for char in words:
+      sleep(0)
+      print(char, end='', flush=True)
 
-
-
-
-  y = float(input (colored("Please input", "green") + colored(" SECOND ", "red") + colored("number", "green") + ("\ninput here: ")))
-
-#The loop to let you keep puttting in problems and getting an answer 
-#It makes you select either 1,2,3, or 4. 
-  operation = True
-  while operation == True:
-    clear(.5)
-    
-    operation_choice = input (colored("Please input", "green") + colored(" OPERATION ", "red") + "\n 1) + \n 2) - \n 3) * (multiply) \n 4) / (divide)" + ("\ninput here: ")) 
-
-
-    if operation_choice == "1":
-        operation1 = "add"
-        operation = False
-        clear(.5)
-        print("Your answer is:", (x + y)) 
-        clear(2)
-
-    elif operation_choice == "2":
-        operation1 = "subtract"
-        operation = False
-        clear(.5)
-        print("Your answer is:", (x - y))
-        clear(2)
-
-    elif operation_choice == "3":
-        operation1 = "multiply"
-        operation = False
-        clear(.5)
-        print("Your answer is:", (x * y))
-        clear(2)
-    
-    elif operation_choice == "4":
-        operation1 = "divide"
-        operation = False  
-        clear(.5)
-        print("Your answer is:", (x / y))
-        clear(2)
-       
-    else:
-        print("***" * 7)
-        print("ERR: INVAILD INPUT") 
-        print("***" * 7)
-        operation = True
+  type(pyfiglet.figlet_format(("Welcome to the Calculator")))   
+  print(colored("Please enter your math problem", "green"))  
+  #Solving your problem and telling you the answer
+  problem = eval(input())
+  print(problem)
+  clear(1.5)
